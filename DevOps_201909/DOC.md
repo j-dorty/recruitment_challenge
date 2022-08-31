@@ -17,7 +17,29 @@
 
 - Create O Auth 2.0 client_id
 
-![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/create_credentials.PNG)
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/create_O_auth_client.PNG)
+
+- Download credentials as JSON
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/download_credentials.PNG)
+
+### Authentication
+
+- Add new email account as a test user for the project
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/test_user.PNG)
+
+- Run either files to run `gmail_authenticate():`
+- Select test Gmail account
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/auth.PNG)
+
+- Allow access to email
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/allow.PNG)
+
+- Upon first run credentials.json file with be used to authenticate hence the google AUTH screens. Once this is complete we save the token in the token.pickle file that is generated. This is so we don't have to authenticate again on subsequent runs.
+- If the token expires - simply delete the token.pickle file and re-authenticate via the google AUTH screens again to receive a new token.
 
 ## Execution:
 
