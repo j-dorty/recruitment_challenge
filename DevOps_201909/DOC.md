@@ -1,35 +1,64 @@
 # Python Google API Challenge
 
-Our challenge is set in the context working with major platform APIs.
-We want you to setup the API for Gmail and do some easy tasks with it.
-(https://developers.google.com/gmail/api)
+## Setup:
 
+- Create new gmail account
+- enable gmail api for email
+  ![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/enable-gmail-api.png)
+-
 
-## Task
+## Execution:
 
-* setup a test gmail account and enable the APIs for it
-* cover the following features:
-    * send emails
-    * search for specific messages in the mailbox, e.g. for keywords in subject or body text
-* a brief documentation of your steps in terms what is needed to setup this API connection, PLEASE in your words not just copy & paste from google
+### Send Mail:
 
+     python .\send_email.py <Destination Email> <Email Subject> <Email Body> (Optional -F <Path to File attachtments>)
 
-### Remarks:
-* well commented and easy to follow code
-* please use only Python
-* also a plus is to show some programming skills by using: classes, functions, etc.
-* provide us runable code !
+Required Args:
 
+- Destination Email - The email address to send an email to {str}
+- Email Subject - The subject of the email {str}
+- Email body - The body of the email {str}
 
-### Good luck and we are very excited to see your solutions! 
+Optional Args:
 
-#### >> Next step in the interview process is then a personal meeting at our office.
+- Email attachments - Include -F / --files flag - Follow with path to attachment files - multiple attachments supported
 
+Output:
+None
 
-### Note: We don't expect you to build THE solution or report here.
-Our goal here is:
-* see how you approach such a problem
-* get an idea of your programming skills and tools you can use
-* test your rational thinking in such a problem case
-* see how you can summarize and present results
+### Search Mail:
 
+    python .\search_email.py <Query>
+
+Required Args:
+
+- Query - query to use as search operator - Follows advanced search syntax documented [here](https://support.google.com/mail/answer/7190)
+
+Output:
+Emails matching the query parameter are printed to console.
+Information outputted follows:
+
+    To: <Destination Email>
+    From: <Origin Email>
+    Subject: <Email Subject>
+    Date: <Day>, <Date (dd, mm, yyyy)> <Time (hh:mm:ss)>
+    Email body: <Email Body>
+    --------------------------------------------------
+
+Example output
+
+    PS C:\Users\edohjac\Documents\recruitment_challenge\DevOps_201909> python .\search_email.py "test"
+    To: haenselamsrecruitmentchallenge@gmail.com
+    From: haenselamsrecruitmentchallenge@gmail.com
+    Subject: jack
+    Date: Tue, 23 Aug 2022 15:37:49 -0500
+    Email body: test
+    --------------------------------------------------
+    To: haenselamsrecruitmentchallenge@gmail.com
+    From: haenselamsrecruitmentchallenge@gmail.com
+    Subject: hello
+    Date: Tue, 23 Aug 2022 14:44:19 -0500
+    Email body: This is a test email
+    --------------------------------------------------
+
+- a brief documentation of your steps in terms what is needed to setup this API connection, PLEASE in your words not just copy & paste from google
