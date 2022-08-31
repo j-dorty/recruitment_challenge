@@ -94,5 +94,3 @@ Example output
     Date: Tue, 23 Aug 2022 14:44:19 -0500
     Email body: This is a test email
     --------------------------------------------------
-
-- a brief documentation of your steps in terms what is needed to setup this API connection, PLEASE in your words not just copy & paste from google
