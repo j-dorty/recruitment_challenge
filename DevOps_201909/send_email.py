@@ -12,8 +12,10 @@ from mimetypes import guess_type as guess_mime_type
 
 from utils import email_address, gmail_authenticate
 
-# Adds the attachment with the given filename to the given message
 def add_attachment(message, filename):
+    """
+    This function adds the given filename to the given message as an attatchment
+    """
     content_type, encoding = guess_mime_type(filename)
     if content_type is None or encoding is not None:
         content_type = 'application/octet-stream'
@@ -40,6 +42,9 @@ def add_attachment(message, filename):
     message.attach(msg)
 
 def build_message(destination, obj, body, attachments=[]):
+    """
+    This function takes the given arguments and creates the email object to be send using send_message()
+    """
     if not attachments: # no attachments
         message = MIMEText(body)
     else:
@@ -55,6 +60,11 @@ def build_message(destination, obj, body, attachments=[]):
     return {'raw': urlsafe_b64encode(message.as_bytes()).decode()}
 
 def send_message(service, destination, obj, body, attachments=[]):
+    """
+    This function takes the Gmail API service and the required email arguemts and:
+        - Calls build_message() on the arguments to create the email object
+        - Requests the service to send the email object
+    """
     return service.users().messages().send(
       userId="me",
       body=build_message(destination, obj, body, attachments)

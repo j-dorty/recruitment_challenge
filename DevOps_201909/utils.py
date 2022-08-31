@@ -10,6 +10,14 @@ email_address = "haenselamsrecruitmentchallenge@gmail.com"
 
 
 def gmail_authenticate():
+    """
+    This function:
+        - Checks if there if there is an access token in token.pickle
+        - If there is simply authenticates with that token
+        - If not attempts to refresh the token
+        - If it cannot then it prompts to authenticte with credentials.json
+        - Saves new access and refresh token for subsequent runs in token.pickle
+    """
     creds = None
     # the file token.pickle stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first time
