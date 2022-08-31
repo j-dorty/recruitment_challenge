@@ -2,10 +2,22 @@
 
 ## Setup:
 
-- Create new gmail account
-- enable gmail api for email
-  ![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/enable-gmail-api.png)
--
+- Create new Gmail account
+- Enable Gmail API for the Gmail account you just created
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/enable-gmail-api.png)
+
+- Create new project
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/create_project.PNG)
+
+- Create Credentials
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/create_credentials.PNG)
+
+- Create O Auth 2.0 client_id
+
+![enter image description here](https://github.com/j-dorty/recruitment_challenge/blob/master/DevOps_201909/assets/create_credentials.PNG)
 
 ## Execution:
 
